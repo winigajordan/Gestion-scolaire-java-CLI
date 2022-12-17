@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="594c4b5a-4a09-4f8a-bbf1-605d48eef6b3" name="Changes" comment="Initialisation et debut du projet">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dao/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Enseignant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Permanant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Vacataire.java" afterDir="false" />
+    <list default="true" id="594c4b5a-4a09-4f8a-bbf1-605d48eef6b3" name="Changes" comment="ajout et liste des enseignants effectué">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Etudiant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enseignant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enseignant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +70,14 @@
       <option name="presentableId" value="Default" />
       <updated>1671225975828</updated>
     </task>
+    <task id="LOCAL-00001" summary="ajout et liste des enseignants effectué">
+      <created>1671234978867</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671234978867</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,5 +90,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajout et liste des enseignants effectué" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout et liste des enseignants effectué" />
   </component>
 </project>

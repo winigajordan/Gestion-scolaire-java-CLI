@@ -1,6 +1,7 @@
 package Entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public abstract class Enseignant implements Serializable {
     protected String matricule;
@@ -10,6 +11,9 @@ public abstract class Enseignant implements Serializable {
     protected String specialite;
     private static int cpt=0;
 
+    protected ArrayList<Module> listModules;
+
+
     public Enseignant(String nom, String prenom, String grade, String specialite) {
         cpt++;
         this.matricule = "ENS--"+String.valueOf(cpt);
@@ -17,6 +21,15 @@ public abstract class Enseignant implements Serializable {
         this.prenom = prenom;
         this.grade = grade;
         this.specialite = specialite;
+        listModules = new ArrayList<Module>();
+    }
+
+    public ArrayList<Module> getListModules() {
+        return listModules;
+    }
+
+    public void setListModules(ArrayList<Module> listModules) {
+        this.listModules = listModules;
     }
 
     public String getMatricule() {
