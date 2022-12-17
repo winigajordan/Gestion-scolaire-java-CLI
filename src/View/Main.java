@@ -156,7 +156,6 @@ public class Main {
                             case 3:
                                 break;
                         }
-
                     } while (choiceEtu!=3);
 
                 case 9:
