@@ -92,7 +92,9 @@ public class Database implements Serializable {
     public void createEtudiant(Etudiant etudiant, Module module){
         etudiant.getListModules().add(module);
         module.getListEtudiant().add(etudiant);
-        listEtudiantDb.add(etudiant);
+        if (!listEtudiantDb.contains(etudiant)){
+            listEtudiantDb.add(etudiant);
+        }
     }
 
     public void showAllEtudiants(){
@@ -123,6 +125,14 @@ public class Database implements Serializable {
         for (Etudiant etudiant:module.getListEtudiant()){
             System.out.println("-------------");
             etudiant.afficher();
+        }
+        System.out.println("-------------");
+    }
+
+    public void showModuleByEnseignant(Enseignant e){
+        for (Module mod : e.getListModules()){
+            System.out.println("-------------");
+            System.out.println(mod);
         }
         System.out.println("-------------");
     }

@@ -62,12 +62,13 @@ public class Module implements Serializable {
         System.out.println("Matricule du module :" + matricule);
         System.out.println("Nom du module : " + nom);
         System.out.println("Volume horaire : " + String.valueOf(volume)+ " heures");
-        enseignant.afficher();
+        //enseignant.afficher();
     }
 
     @Override
     public String toString() {
-        String output="Nom : "+nom+ "\n Matricule : "+matricule;
+        String output="Nom : "+nom+
+                "\n Matricule : "+matricule;
         return output;
     }
 }
