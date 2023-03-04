@@ -65,6 +65,10 @@ public class Database implements Serializable {
         listModuleDb.add(module);
     }
 
+    public void addModule(Module module){
+        listModuleDb.add(module);
+    }
+
     public void showAllModule(){
         for(Module module:listModuleDb){
             System.out.println("-------------");
@@ -136,5 +140,84 @@ public class Database implements Serializable {
         }
         System.out.println("-------------");
     }
+
+    public void deleteEnseignant(Enseignant e){
+        for (Module m : e.getListModules()) {
+            m.setEnseignant(null);
+        }
+        listEnseignantDb.remove(e);
+        System.out.println("Enseignant supprimé");
+    }
+
+    public void deleteModule(Module m){
+       for (Enseignant e: listEnseignantDb){
+           if (e.getListModules().contains(m)){
+               e.getListModules().remove(m);
+           }
+       }
+        for (Etudiant et : listEtudiantDb){
+          if (et.getListModules().contains(m)){
+            et.getListModules().remove(m);
+          }
+        }
+        listModuleDb.remove(m);
+        System.out.println("Module supprimé");
+    }
+
+    public void addModuleToEnseignant(Enseignant e, Module m){
+        if (!e.getListModules().contains(m)){
+            e.getListModules().add(m);
+        } else {
+            System.out.println("Ce module existe déjà");
+        }
+    }
+
+    public void removeModuleToEnseignant(Enseignant e, Module m){
+        if (e.getListModules().contains(m)){
+            e.getListModules().remove(m);
+        } else {
+            System.out.println("Ce module n'existe pas");
+        }
+    }
+
+    public void deleteEtudiant(Etudiant et){
+        for (Module m : et.getListModules()){
+            m.getListEtudiant().remove(et);
+        }
+        listEtudiantDb.remove(et);
+        System.out.println("Etudiant supprimé");
+    }
+
+
+    public void addEtudiant(Etudiant etudiant){
+        listEtudiantDb.add(etudiant);
+        System.out.println("Etudiant ajouté");
+    }
+
+    public boolean moduleEtudiant(Etudiant etudiant, Module md){
+        for(Module mod : etudiant.getListModules()){
+            if (mod.getMatricule().equals(md.getMatricule())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean moduleEnseignant(Enseignant e, Module md){
+        for(Module mod : e.getListModules()){
+            if (mod.getMatricule().equals(md.getMatricule())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void removeModuleToEtudiant(Etudiant etudiant, Module md){
+        md.getListEtudiant().remove(etudiant);
+        etudiant.getListModules().remove(md);
+        System.out.println("Module retire a l'etudiant avec succes");
+    }
+
+
 
 }
